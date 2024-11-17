@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ESCUELA DE MUSICA Y ARTES EMMA</title>
+    <link rel="stylesheet" type="text/css" href="EMMA.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/30635037d9.js" crossorigin="anónimo"></script>
+    <script language="javascript">
+
+        function ampliarImagen(imagen) {
+            var superponer = document.getElementById('superponer');
+            var superponerImagen = document.getElementById('superponerImagen');
+
+            superponer.style.display = 'block';
+            superponerImagen.src = imagen.src;
+        }
+
+        function reducirImagen() {
+            var superponer = document.getElementById('superponer');
+
+            superponer.style.display = 'none';
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="navbarmenu">
+		<h1 class="hashtag">#ByEma</h1>
+        <button id="abrir" class="abrir-menu"><i class="fa fa-bars"></i></button>
+		<div class="menu" id="menu">
+			<button id="cerrar" class="cerrar-menu"><i class="fa fa-times"></i></button>
+			<ul>
+				<li class="lista"><a href="index.html">Inicio</a>
+				<li class="lista"><a href="#">Instrumentos</a>
+				<ul class="submenu">
+					<li><a href="bajo.html">Bajo</a></li>
+					<li><a href="bateria.html">Batería</a></li>
+					<li><a href="guitarra.html">Guitarra</a></li>
+					<li><a href="teclado.html">Teclado</a></li>
+				</ul>
+			  </li>
+				<li class="lista"><a href="canto.html">Canto</a></li>
+				<li class="lista"><a href="pinturaD.html">Pintura y Dibujo</a></li>
+				<li class="lista"><a href="galeria.html">Galería</a></li>
+				<li class="lista"><a href="nosotros.html">Sobre nosotros</a></li>
+				<li class="lista"><a href="mapa.html">Mapa</a></li>
+				<span class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </span>
+			</ul>
+		</div>	
+	</nav>
+	<script src="inicio.js"></script>
+    <header class="header-galeria">
+        <h1>Hecha un vistaso
+            <br>
+            a nuestra galería de arte
+        </h1>
+    </header>
+    <main>
+        <div class="container-fluid1">
+            <h1 class="texto-galeria">¡Haz click sobre cada pintura para visualizarla mejor!</h1>
+            <div class="rowa">
+                <div class="column">
+                    <img src="Imagenes/Img-2.jpeg" alt="" class="pintura1" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-3.jpeg" alt="" class="pintura2" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-4.jpeg" alt="" class="pintura3" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-5.jpeg" alt="" class="pintura3" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-5.jpeg" alt="" class="pintura3" onclick="ampliarImagen(this)">
+                </div>
+                <div class="column">
+                    <img src="Imagenes/Img-6.jpeg" alt="" class="pintura4" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-7.jpeg" alt="" class="pintura5" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-8.jpeg" alt="" class="pintura6" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-9.jpeg" alt="" class="pintura3" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-10.jpeg" alt="" class="pintura3" onclick="ampliarImagen(this)">
+                </div>
+                <div class="column">
+                    <img src="Imagenes/Img-11.jpeg" alt="" class="pintura4" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-12.jpeg" alt="" class="pintura4" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-13.jpeg" alt="" class="pintura4" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-14.jpeg" alt="" class="pintura4" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-15.jpeg" alt="" class="pintura4" onclick="ampliarImagen(this)">
+                </div>
+                <div class="column">
+                    <img src="Imagenes/Img-16.jpeg" alt="" class="pintura4" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-17.png" alt="" class="pintura5" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-18.png" alt="" class="pintura6" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-19.png" alt="" class="pintura6" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-20.png" alt="" class="pintura6" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-25.jpeg" alt="" class="pintura6" onclick="ampliarImagen(this)">
+                </div>
+                <div class="column">
+                    <img src="Imagenes/Img-21.jpg" alt="" class="pintura1" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-22.png" alt="" class="pintura2" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-23.jpg" alt="" class="pintura3" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-24.JPG" alt="" class="pintura6" onclick="ampliarImagen(this)">
+                    <img src="Imagenes/Img-2.jpeg" alt="" class="pintura6" onclick="ampliarImagen(this)">
+                </div>
+            </div>
+        </div>
+        <div id="superponer" onclick="reducirImagen()">
+            <img id="superponerImagen">
+        </div>
+    </main>
+    	<footer class="pie">
+		<div class="padre">
+			<div class="box1">
+				<p class="emma">EMA</p>
+			</div>
+			<div class="flechas">
+				<h1 align="left">Navegación</h1>
+				<p align="left" class="lin"><a href="Inicio.html"><i class="fa-solid fa-house"></i> Inicio</a></p>
+				<p align="left" class="lin"><a href="nosotros.html"><i class="fa-solid fa-address-card"></i> Sobre
+						nosotros</a></p>
+				<p align="left" class="lin"><a href="#"><i class="fa-solid fa-certificate"></i> Cursos</a></p>
+			</div>
+			<div class="box">
+				<h1 align="left">Información</h1>
+				<p align="left"><i class="fa-sharp fa-solid fa-phone"></i> 7270-0223</p>
+				<p align="left"><i class="fa-solid fa-envelope"></i> escuelademusicartes@hotmail.com</p>
+				<p align="left"><i class="fa-solid fa-location-dot"></i> 4a Avenida Sur Santa Ana, Santa
+					Ana,<br>&nbsp;&nbsp;&nbsp;&nbsp;El Salvador </p>
+			</div>
+			<div>
+				<h1 align="left">Horario</h1>
+				<p align="left"><i class="fa-solid fa-calendar-days"></i> Lunea a Viernes</p>
+				<p align="left"><i class="fa-solid fa-clock"></i> 8:00 AM a 4:00 PM</p>
+				<p align="left"><i class="fa-solid fa-house-lock"></i> Fin de semana cerrado</p>
+			</div>
+		</div>
+		<div class="fin">
+			<small>copyright &copy; 2023 <b> EMMA</b>- Todos los Derechos Reservados.</small>
+		</div>
+		<div class="redes">
+			<a href="https://www.facebook.com/escuelademusicartesEMA?mibextid=ZbWKwL">
+				<i class="fa-brands fa-square-facebook"></i>
+			</a>
+			<a class="but" href="https://instagram.com/escuelaema_sv?igshid=NTc4MTIwNjQ2YQ==">
+				<i class="fa-brands fa-square-instagram"></i>
+			</a>
+			<a class="but" href="https://wa.me/50372700223?text=">
+				<i class="fa-brands fa-square-whatsapp"></i>
+			</a>
+		</div>
+	</footer>
+</body>
+
+</html>

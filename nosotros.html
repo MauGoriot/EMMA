@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MISION, VISION Y HISTORIA</title>
+	<link rel="stylesheet" type="text/css" href="EMMA.css">
+	<script src="https://kit.fontawesome.com/30635037d9.js" crossorigin="anónimo"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+		crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/30635037d9.js" crossorigin="anónimo"></script>
+</head>
+
+<body>
+	<nav class="navbarmenu">
+		<h1 class="hashtag">#ByEma</h1>
+		<button id="abrir" class="abrir-menu"><i class="fa fa-bars"></i></button>
+		<div class="menu" id="menu">
+			<button id="cerrar" class="cerrar-menu"><i class="fa fa-times"></i></button>
+			<ul>
+				<li class="lista"><a href="index.html">Inicio</a>
+				<li class="lista"><a href="#">Instrumentos</a>
+					<ul class="submenu">
+						<li><a href="bajo.html">Bajo</a></li>
+						<li><a href="bateria.html">Batería</a></li>
+						<li><a href="guitarra.html">Guitarra</a></li>
+						<li><a href="teclado.html">Teclado</a></li>
+					</ul>
+				</li>
+				<li class="lista"><a href="canto.html">Canto</a></li>
+				<li class="lista"><a href="pinturaD.html">Pintura y Dibujo</a></li>
+				<li class="lista"><a href="galeria.html">Galería</a></li>
+				<li class="lista"><a href="nosotros.html">Sobre nosotros</a></li>
+				<li class="lista"><a href="mapa.html">Mapa</a></li>
+				<span class="icons">
+					<i class="fab fa-facebook"></i>
+					<i class="fab fa-instagram"></i>
+					<i class="fab fa-twitter"></i>
+				</span>
+			</ul>
+		</div>
+	</nav>
+	<script src="inicio.js"></script>
+
+	<header class="header-nosotros">
+		<h1>Acerca de nuestra
+			<br>
+			historia
+		</h1>
+	</header>
+
+	<main>
+
+		<!-- principio del body-->
+
+				<div class="container my-5 py-5">
+					<div class="row gx-5 gy-5">
+						<div class="col-md-4 col-sm-6">
+							<div class="cardP">
+								<div class="img-boxP">
+									<img src="imagenes/vision.jpg">
+								</div>
+								<div class="contentP">
+									<h2>Visión<br><span>EMA</span></h2>
+									<p>Nos consolidamos como un centro<br> de formación artística con excelencia,<br> para
+										un desarrollo cultural.</p>
+								</div>
+							</div>
+						</div>
+		
+						<!--Imagen 2-->
+						<div class="col-md-4 col-sm-6">
+							<div class="cardP">
+								<div class="img-boxP">
+									<img src="imagenes/grupal1.jpg">
+								</div>
+								<div class="contentP">
+									<h2>Misión<br><span>EMA</span></h2>
+									<p>Formar, niños y adultos en el arte<br> de la música, el dibujo y la pintura,
+										descubriendo el lado humano artístico.p>
+								</div>
+							</div>
+						</div>
+		
+						<!--Imagen 3-->
+						<div class="col-md-4 col-sm-6">
+							<div class="cardP">
+								<div class="img-boxP">
+									<img src="imagenes/historia.jpg">
+								</div>
+								<div class="contentP">
+									<h2>Historia<br><span>EMA</span></h2>
+									<p>Damos apertura en enero del 2016, nuestro crecimiento ha sido paulatino hasta lograr
+										dar a conocer nuestras primeras promociones y realizar eventos en lugares como
+										Teatro Nacional de Santa Ana, Auditorium del Centro Escolar INSA, Sala de
+										recepciones, entre otros.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+		<section class="form-n">
+			<p class="h1">¿Deseas contactarnos?</p>
+			<form class="row g-3">
+				<div class="col-md-4">
+					<label for="validationDefault01" class="form-label">Primer nombre</label>
+					<input type="text" class="form-control" id="validationDefault01" value="Mark" required>
+				</div>
+				<div class="col-md-4">
+					<label for="validationDefault02" class="form-label">Apellido</label>
+					<input type="text" class="form-control" id="validationDefault02" value="Otto" required>
+				</div>
+				<div class="col-md-4">
+					<label for="validationDefaultUsername" class="form-label">email</label>
+					<div class="input-group">
+						<span class="input-group-text" id="inputGroupPrepend2">@</span>
+						<input type="text" class="form-control" id="validationDefaultUsername"
+							aria-describedby="inputGroupPrepend2" required>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<label for="validationDefault03" class="form-label">Departamento</label>
+					<input type="text" class="form-control" id="validationDefault03" required>
+				</div>
+				<div class="col-md-4">
+					<label for="validationDefault03" class="form-label">Municipio</label>
+					<input type="text" class="form-control" id="validationDefault03" required>
+				</div>
+				<div class="col-12">
+					<button class="btn btn-outline-info" type="submit">Enviar</button>
+					<button class="btn btn-outline-light" type="reset">Borrar</button>
+				</div>
+			</form>
+		</section>
+
+		<!--principio de footer-->
+
+		<footer class="pie">
+			<div class="padre">
+				<div class="box1">
+					<p class="emma">EMA</p>
+				</div>
+				<div class="flechas">
+					<h1 align="left">Navegación</h1>
+					<p align="left" class="lin"><a href="Inicio.html"><i class="fa-solid fa-house"></i> Inicio</a></p>
+					<p align="left" class="lin"><a href="nosotros.html"><i class="fa-solid fa-address-card"></i> Sobre
+							nosotros</a></p>
+					<p align="left" class="lin"><a href="#"><i class="fa-solid fa-certificate"></i> Cursos</a></p>
+				</div>
+				<div class="box">
+					<h1 align="left">Información</h1>
+					<p align="left"><i class="fa-sharp fa-solid fa-phone"></i> 7270-0223</p>
+					<p align="left"><i class="fa-solid fa-envelope"></i> escuelademusicartes@hotmail.com</p>
+					<p align="left"><i class="fa-solid fa-location-dot"></i> 4a Avenida Sur Santa Ana, Santa
+						Ana,<br>&nbsp;&nbsp;&nbsp;&nbsp;El Salvador </p>
+				</div>
+				<div>
+					<h1 align="left">Horario</h1>
+					<p align="left"><i class="fa-solid fa-calendar-days"></i> Lunea a Viernes</p>
+					<p align="left"><i class="fa-solid fa-clock"></i> 8:00 AM a 4:00 PM</p>
+					<p align="left"><i class="fa-solid fa-house-lock"></i> Fin de semana cerrado</p>
+				</div>
+			</div>
+			<div class="fin">
+				<small>copyright &copy; 2023 <b> EMMA</b>- Todos los Derechos Reservados.</small>
+			</div>
+			<div class="redes">
+				<a href="https://www.facebook.com/escuelademusicartesEMA?mibextid=ZbWKwL">
+					<i class="fa-brands fa-square-facebook"></i>
+				</a>
+				<a class="but" href="https://instagram.com/escuelaema_sv?igshid=NTc4MTIwNjQ2YQ==">
+					<i class="fa-brands fa-square-instagram"></i>
+				</a>
+				<a class="but" href="https://wa.me/50372700223?text=">
+					<i class="fa-brands fa-square-whatsapp"></i>
+				</a>
+			</div>
+		</footer>
+	</main>
+</body>
+
+</html>

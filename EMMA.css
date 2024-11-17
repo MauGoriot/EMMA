@@ -1,0 +1,880 @@
+/*Esteban Alejandro Mate Lúe*/
+
+/*Hoja de estilos de la pagina principal*/
+
+* {
+    margin: 0%;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: rgb(53, 14, 101);
+    background: radial-gradient(circle, rgba(53, 14, 101, 1) 0%, rgba(54, 16, 78, 1) 100%, rgba(134, 41, 194, 1) 100%);
+}
+
+/*Banner de Inicio*/
+.menu {
+    padding: 25px;
+}
+
+.titulo {
+    color: white;
+}
+
+.titulo-calendario {
+    color: white;
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.header-inicio {
+    display: flex;
+    background-image: url(imagenes/BANNER.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    align-items: center;
+}
+
+.ema-header-logo {
+    width: 25%;
+    margin-left: 8%;
+}
+
+@media (max-width: 950px) {
+    .ema-header-logo {
+        display: none;
+        /* Oculta el logo en pantallas pequeñas (menos de 576px) */
+    }
+}
+
+.contacto {
+    text-align: center;
+}
+
+.contacto>a {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin: 30px;
+}
+
+
+/*Caja contenedora del menu*/
+.navbarmenu {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(72, 8, 106, 0.332);
+}
+
+.navbarmenu .hashtag {
+    color: white;
+    margin-left: 3%;
+    font-size: 30px;
+}
+
+.menu>ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0px 12px;
+    font-size: 18px;
+}
+
+.menu .lista a:hover {
+    background: rgb(171, 18, 248);
+}
+
+.menu .lista>a {
+    display: block;
+    padding: 9px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    transition: 0.2s ease;
+
+}
+
+/*SUB MENU*/
+.submenu>li {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+    width: 120px;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    transition: 0.2s ease;
+    text-decoration: none;
+}
+
+.submenu {
+    list-style: none;
+    display: none;
+    position: absolute;
+    background-color: rgb(60, 3, 89);
+    width: 120px;
+    padding-left: 0;
+}
+
+.menu .lista:hover .submenu {
+    display: block;
+}
+
+/*redes sociales*/
+.icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+.fa-facebook:hover {
+    color: rgb(0, 110, 255);
+}
+
+.fa-twitter:hover {
+    color: rgb(86, 154, 243);
+}
+
+.fa-instagram:hover {
+    color: rgb(255, 0, 191);
+}
+
+/* responsibe*/
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+@media screen and (max-width: 880px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        margin-right: 1rem;
+        border: 0;
+        font-size: 2rem;
+        background-color: transparent;
+    }
+
+    .navbar>img {
+        width: 4rem;
+        margin-left: 30px;
+    }
+
+    .menu {
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgb(60, 3, 89);
+        padding: 1rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .menu .lista a:hover {
+        background: rgb(171, 18, 248);
+    }
+
+    .menu.visible {
+        opacity: 1;
+        visibility: visible;
+        width: 100%;
+    }
+
+    .menu>ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .redes_sociales {
+        display: flex;
+        position: absolute;
+        margin-left: 8.5rem;
+        opacity: 0.8;
+    }
+
+    .icons i {
+        display: inline-block;
+        padding: 12px;
+    }
+
+}
+
+/*Calendario*/
+.calendario {
+    padding: 100px 0px;
+    background-color: rgba(77, 14, 128, 0.895);
+}
+
+.tabla {
+    border: 1px solid;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+tr td {
+    border: 1px solid;
+    height: 195px;
+}
+
+.izquierda {
+    width: 200px;
+    background-color: black;
+}
+
+.izquierda>img {
+    width: 100%;
+}
+
+.derecha {
+    width: 800px;
+    background-color: black;
+}
+
+.derecha>img {
+    float: right;
+    width: 65%;
+    height: 210px;
+    display: block;
+}
+
+.derecha>p {
+    position: absolute;
+    color: white;
+    padding: 110px 15px;
+}
+
+.titulo-section-index {
+    text-align: center;
+    margin: 3%;
+    color: white;
+}
+
+/*Hoja de estilo de la galeria de artes*/
+/*Galeria de arte*/
+.header-galeria {
+    background-image: url(Imagenes/Banner-galeria.png);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px;
+}
+
+.header-galeria>h1 {
+    padding: 270px 90px;
+    color: rgb(255, 255, 255);
+}
+
+.container-fluid1 {
+    padding-top: 5%;
+    background-color: rgba(7, 7, 75, 0.831);
+    padding-bottom: 3%;
+}
+
+.texto-galeria {
+    text-align: center;
+    color: white;
+    padding-bottom: 4%;
+}
+
+.rowa {
+    display: flex;
+    width: 100%;
+}
+
+.rowa .column {
+    flex: 33.3%;
+    width: auto;
+    overflow: hidden;
+    padding: 0 4px;
+    height: 100%;
+}
+
+.rowa .column img {
+    width: 100%;
+    height: 100%;
+}
+
+#superponer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 99999px;
+}
+
+#superponerImagen {
+    max-width: 80%;
+    max-height: 80%;
+    margin-top: 5%;
+}
+
+/*Steven Alexis*/
+
+/*contenedor del inicio párrafo e imagen*/
+.ContenedorPin {
+    align-items: center;
+    display: flex;
+    background: rgb(53, 14, 101);
+    background: radial-gradient(circle, rgba(53, 14, 101, 1) 0%, rgba(54, 16, 78, 1) 100%, rgba(134, 41, 194, 1) 100%);
+}
+
+.header-pintura {
+    background-image: url(Imagenes/Banner.pintura.png);
+    background-size: cover;
+
+    width: 100%;
+    height: 700px;
+}
+
+.header-pintura>h1 {
+    padding: 370px 50px;
+    color: rgb(8, 4, 4);
+
+}
+
+.parrafo {
+    font-size: 19px;
+    color: rgb(223, 178, 178);
+    width: 50%;
+    margin: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+.image-container {
+    width: 50%;
+    padding: 30px;
+}
+
+.imginicio {
+    max-width: 60%;
+    border-radius: 10%;
+    box-shadow: 3px 3px 1px #c37eff;
+}
+
+.imginicio:hover {
+    transform: translatey(-20px);
+    box-shadow: 1px 3px 3px #961818;
+    opacity: 0.5;
+}
+
+/*contenedor de imagenes*/
+
+.cardP {
+    position: relative;
+    background: black;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.cardP:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.cardP .img-boxP {
+    transition: 0.5s;
+}
+
+.cardP:hover .img-boxP {
+    opacity: 0.5;
+}
+
+.cardP .img-boxP img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.cardP .contentP {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    bottom: -100%;
+    padding: 20px;
+    padding-top: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.cardP:hover .contentP {
+    bottom: 0;
+}
+
+/*color de fondo de la descripción*/
+.cardP:nth-child(1) .contentP {
+    background: linear-gradient(0deg, rgb(225, 0, 255), transparent);
+}
+
+.cardP:nth-child(2) .contentP {
+    background: linear-gradient(0deg, purple, transparent);
+}
+
+.cardP:nth-child(3) .contentP {
+    background: linear-gradient(0deg, rgb(85, 7, 100), transparent);
+}
+
+/*descripcion de la imagen*/
+.cardP .contentP h2 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: white;
+    font-size: 20px;
+}
+
+.cardP .contentP h2 span {
+    color: rgb(246, 255, 0);
+    font-size: 16px;
+
+}
+
+.cardP .contentP p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .parrafo {
+        width: 100%;
+        margin: 20px;
+    }
+
+    .imginicio {
+        height: auto;
+        margin-top: 20px;
+        margin-right: 0;
+    }
+}
+
+
+/*Mauricio Enrique Barrientos Henandez*/
+/*banner de instrumentos-bajo*/
+.fondo {
+    background-color: #BA94D1;
+}
+
+.header-instrumentos-bajo {
+    background-image: url(imagenes/Banner-bajo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px;
+}
+
+/*banner de instrumentos-bateria*/
+.header-instrumentos-bate {
+    background-image: url(imagenes/Banner-bateria.png);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px;
+}
+
+/*banner de instrumentos-guitarra*/
+.header-instrumentos-guita {
+    background-image: url(imagenes/Banner-guitar.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px;
+}
+
+/*banner de instrumentos-teclado*/
+.header-instrumentos-tecla {
+    background-image: url(imagenes/banner-tecla.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px;
+}
+
+/*banner de instrumentos-canto*/
+.header-instrumentos-can {
+    background-image: url(imagenes/Banner-canto.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px;
+}
+
+/*CONTENIDO DEL HEADER*/
+.header-contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 300px;
+    font-size: 60px;
+    color: white;
+}
+
+/*Primera seccion */
+.seccion {
+    background-color: #3b1b46;
+    color: white;
+    margin: 10px auto;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 5rem;
+    width: 75%;
+    font-size: 25px;
+}
+
+.articulo {
+    padding: 20px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.titulo-articulo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.curso-gale {
+    display: flex;
+    height: 20rem;
+    gap: 1rem;
+    margin: 20px;
+}
+
+.curso-gale>div {
+    flex: 1;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.curso-gale>div:hover {
+    flex: 2;
+    border-radius: 70px;
+}
+
+/*segunda seccion*/
+.seccion-2 {
+    width: 100%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.arti-2 {
+    border-radius: 10px;
+    width: 255;
+    margin: auto;
+    margin-left: 20px;
+    margin: 30px 0;
+}
+
+.arti-2>h3 {
+    color: white;
+    background-color: #3b1b46;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.ul-1 {
+    list-style: none;
+    margin: 10px 40px;
+}
+
+.ul-1>li {
+    color: white;
+    display: inline-block;
+    margin: 20px 10px;
+    background-color: rgba(77, 14, 128, 0.895);
+    padding: 15px;
+    border-radius: 60px;
+    box-shadow: 1px 5px 5px rgb(66, 64, 64);
+}
+
+/*.ul-1 .li-1 {
+    display: inline-block;
+    background-color: red;
+}
+
+.ul-1 .li-1 {
+    display: inline-block;
+    background-color: rgb(255, 153, 0);
+}
+
+.ul-1 .li-2 {
+    display: inline-block;
+    background-color: rgb(255, 230, 0);
+}
+
+.ul-1 .li-3 {
+    display: inline-block;
+    background-color: rgb(94, 255, 0);
+}
+
+.ul-1 .li-4 {
+    display: inline-block;
+    background-color: rgb(0, 217, 255);
+}
+
+.ul-1 .li-5 {
+    display: inline-block;
+    background-color: rgb(0, 17, 255);
+}
+
+.ul-1 .li-6 {
+    display: inline-block;
+    background-color: rgb(98, 0, 255);
+}*/
+
+/*el .arti-3 es para el articulo de los horarios*/
+.arti-3 {
+    border-radius: 10px;
+    padding: 5px;
+    width: 900px;
+    display: inline-block;
+    margin: 0 auto;
+    color: white;
+    background-color: #3b1b46;
+    padding: 30px;
+    border-radius: 10px;
+
+}
+
+.arti-3>h3 {
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.ul-3 {
+    display: inline-block;
+    list-style: none;
+    margin: 0 100px 30px 100px;
+}
+
+.ul-3>ul {
+    list-style: none;
+}
+
+/*NOSOTROS*/
+.header-nosotros {
+    background-image: url(imagenes/banner-nosotros.png);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px;
+}
+
+.header-nosotros>h1 {
+    padding: 20% 10%;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+
+}
+
+
+/*formulario*/
+.form-n {
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    color: #fff;
+}
+
+/*pie de pagina*/
+.pie {
+    width: 100%;
+    background-color: #3b1b46;
+    background-size: 100% 85%;
+    color: white;
+
+
+}
+
+.pie .padre {
+    width: 100%;
+    max-width: 210082PX;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 35px 25px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.pie .padre .box figure {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.pie .padre .box1 {
+    justify-content: space-between;
+    width: 200xp;
+    height: 150px;
+}
+
+.pie .padre .box1 {
+    height: 50px;
+}
+
+.im {
+    height: 175px;
+    display: inline-block;
+}
+
+.pie .padre .box2 {
+    position: relative;
+    right: 100;
+}
+
+.pie .padre .box p {
+    color: white;
+    margin-bottom: 1px;
+}
+
+.pie .padre .box a {
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+}
+
+a {
+    color: white;
+}
+
+#aa {
+    background: pink;
+    padding: 8px;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+}
+
+.pie .fin {
+    background-color: rgb(26, 5, 45);
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+
+}
+
+@media screen and (max-width:800px) {
+    .pie .padre {
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+}
+
+.redes {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+}
+
+.redes a {
+    text-decoration: none;
+    /* Quita el subrayado */
+    color: inherit;
+}
+
+.redes a:hover {
+    text-decoration: underline;
+}
+
+.but {
+    width: 200px;
+    height: 200px;
+    margin-left: 25px;
+}
+
+i {
+    color: #63E6BE;
+}
+
+.flechas a {
+    text-decoration: none;
+}
+
+.emma {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif Black;
+
+}
+
+/*mapa digital*/
+/*Mauricio Barrientos*/
+.mapa-1 {
+    width: 50rem;
+    margin: 30px auto;
+    color: white;
+    background-image: url(imagenes/mapa.jpg);
+    font-size: 1.5rem;
+    border-radius: 5rem;
+    text-align: center;
+}
+
+.mapa {
+    margin: 30px auto;
+    width: 50rem;
+    text-align: center;
+    /*background-image: url(https://w.wallhaven.cc/full/lm/wallhaven-lmv28y.jpg);*/
+    background-image: url(imagenes/mapa.jpg);
+    background-position-y: -250px;
+    font-size: 1.5rem;
+    border-radius: 5rem;
+}
+
+.mapa td {
+    border: none;
+    height: 5rem;
+}
+
+.mapa a {
+    text-decoration: none;
+    color: white;
+}
+
+.mapa a:hover {
+    color: #f3e968;
+}
